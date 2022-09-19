@@ -20,3 +20,4 @@ jobs:
       run: mvn clean versions:set -DnewVersion=0.4.0
     - name: Maven Build
       run: mvn clean package
+      
