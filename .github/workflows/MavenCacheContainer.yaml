@@ -15,9 +15,9 @@ jobs:
       id: cache
       with:
         path: /root/.m2/repository
-        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-        restore-keys: ${{ runner.os }}-m2
-    - name: Maven version set
-      run: mvn clean versions:set -DnewVersion=0.4.0
+        key: ${{ runner.os }}-m2-v1-${{ hashFiles('**/pom.xml') }}
+        restore-keys: ${{ runner.os }}-m2-v1
+    #- name: Maven version set
+      #run: mvn clean versions:set -DnewVersion=0.4.0
     - name: Maven Build
       run: mvn clean package
